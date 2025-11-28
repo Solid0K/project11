@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghar Sansar Realty</title>
+    <style>
+        /* Essential Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; 
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Accent Color - Warm Blue for Trust */
+        .accent {
+            color: #3f51b5; 
+        }
+
+        /* Header and Navigation */
+        header {
+            background: #3f51b5; /* Blue Header */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 30px 10px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h2 {
+            color: #3f51b5;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        /* --- Search Filters Section --- */
+        #filters {
+            background-color: #e8eaf6; /* Light blue background for search */
+        }
+        
+        .filter-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 15px;
+        }
+        
+        .form-group-inline {
+            /* Simple stacking for inputs */
+            margin-bottom: 10px;
+        }
+
+        .form-group-inline label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .filter-form input,
+        .filter-form select {
+            width: 100%; 
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .search-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #fbc02d; /* Yellow accent button */
+            color: #333;
+            border: none;
+            font-weight: bold;
+        }
+
+        /* --- Property Listings --- */
+        #listings {
+            text-align: left;
+        }
+        
+        .property-card {
+            background-color: white;
+            border: 1px solid #ccc;
+            margin: 15px auto;
+            padding: 15px;
+            width: 90%;
+            max-width: 350px;
+            text-align: left;
+        }
+
+        .property-card h3 {
+            color: #d32f2f; /* Red/Maroon for price */
+            margin-bottom: 5px;
+            font-size: 1.5em;
+        }
+        
+        .property-card p {
+            margin-bottom: 5px;
+        }
+
+        /* Styling the IMG tag for visual display */
+        .property-card img {
+            width: 100%; 
+            height: 200px; 
+            display: block;
+            margin-bottom: 10px;
+            background-color: #bdbdbd; /* Gray background for placeholder area */
+            border: 1px solid #999;
+            object-fit: cover;
+        }
+        
+        .details-link {
+            display: block;
+            text-align: center;
+            padding: 8px;
+            background-color: #3f51b5;
+            color: white;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        
+        /* --- Inquiry Form --- */
+        #inquiry {
+            background-color: #f7f7f7;
+        }
+        
+        .inquiry-form {
+            max-width: 450px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .inquiry-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .inquiry-form input,
+        .inquiry-form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .submit-inquiry {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50; /* Green action button */
+            color: white;
+            border: none;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>APKA APNA GHAR</h1>
+        <nav>
+            <ul>
+                <li><a href="#filters">Search</a></li>
+                <li><a href="#listings">Properties</a></li>
+                <li><a href="#inquiry">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Filters Section -->
+    <section id="filters">
+        <h2>Find Your Dream Home</h2>
+        
+        <form class="filter-form" action="#" method="GET">
+            <div class="form-group-inline">
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option>Any City</option>
+                    <option>Bandra, Mumbai</option>
+                    <option>South Delhi</option>
+                </select>
+            </div>
+            <div class="form-group-inline">
+                <label for="type">Property Type:</label>
+                <select id="type" name="type">
+                    <option>Any Type</option>
+                    <option>Flat</option>
+                    <option>Villa</option>
+                    <option>Commercial</option>
+                </select>
+            </div>
+            <div class="form-group-inline">
+                <label for="price_max">Max Price (₹):</label>
+                <input type="number" id="price_max" name="price_max" placeholder="e.g., 5000000">
+            </div>
+            
+            <button type="submit" class="search-button">Search Listings</button>
+        </form>
+    </section>
+
+    <!-- Property Listings Section -->
+    <section id="listings">
+        <h2>Available Properties</h2>
+        
+        <div class="property-card">
+            <img class="property-image" 
+                 src="house1.webp" 
+                 alt="Modern residential tower exterior in Mumbai.">
+            <h3>₹45,00,000</h3>
+            <p><strong>3 BHK, 2 Bath</strong></p>
+            <p>Premium Flat in Bandra, Mumbai. 1,200 sq ft.</p>
+            <a href="#inquiry" class="details-link">Inquire Now</a>
+        </div>
+
+        <div class="property-card">
+            <img class="property-image" 
+                 src="house2.avif" 
+                 alt="Spacious independent villa with a lawn.">
+            <h3>₹95,00,000</h3>
+            <p><strong>4 BHK, 3 Bath</strong></p>
+            <p>Independent Villa in South Delhi, Large garden.</p>
+            <a href="#inquiry" class="details-link">Inquire Now</a>
+        </div>
+        
+        <div class="property-card">
+            <img class="property-image" 
+                 src="house3.jpg" 
+                 alt="Glass storefront for a commercial office.">
+            <h3>₹2,50,00,000</h3>
+            <p><strong>Commercial Space</strong></p>
+            <p>Prime Commercial Office Space, Connaught Place.</p>
+            <a href="#inquiry" class="details-link">Inquire Now</a>
+        </div>
+        
+    </section>
+
+    <!-- Inquiry Form Section -->
+    <section id="inquiry">
+        <h2>Contact Us for Details</h2>
+        <p>Fill out the form below and specify the property you are interested in.</p>
+
+        <form class="inquiry-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="i_name">Your Name</label>
+                <input type="text" id="i_name" name="i_name" required>
+            </div>
+            <div class="form-group">
+                <label for="i_email">Email Address</label>
+                <input type="email" id="i_email" name="i_email" required>
+            </div>
+            <div class="form-group">
+                <label for="i_property">Property of Interest (e.g., Flat in Bandra)</label>
+                <input type="text" id="i_property" name="i_property">
+            </div>
+            <div class="form-group">
+                <label for="i_message">Your Message</label>
+                <textarea id="i_message" name="i_message" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-inquiry">Send Inquiry</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Apka Apna Ghar | Since 1997</p>
+        <p>Call us at +91 98765 42130 | &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
+
